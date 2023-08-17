@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction DApp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Auction DApp</h1>
+
+    <div>
+        <h2>Create New Auction</h2>
+        <form id="createAuctionForm">
+            <label for="nftAddress">NFT Contract Address:</label>
+            <input type="text" id="nftAddress" required><br>
+            <label for="nftId">NFT ID:</label>
+            <input type="number" id="nftId" required><br>
+            <label for="startingBid">Starting Bid:</label>
+            <input type="number" id="startingBid" required><br>
+            <button type="submit">Create Auction</button>
+        </form>
+    </div>
+
+    <div>
+        <h2>Available Auctions</h2>
+        <ul id="auctionList"></ul>
+    </div>
+
+    <div id="auctionDetails">
+        <h2>Auction Details</h2>
+        <p><strong>NFT Contract:</strong> <span id="nftContract"></span></p>
+        <p><strong>NFT ID:</strong> <span id="nftIdDetail"></span></p>
+        <p><strong>Starting Bid:</strong> <span id="startingBidDetail"></span></p>
+        <form id="placeBidForm">
+            <label for="bidAmount">Your Bid:</label>
+            <input type="number" id="bidAmount" required><br>
+            <button type="submit">Place Bid</button>
+        </form>
+    </div>
+
+    <!-- Use the CDN link to include web3.min.js -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
