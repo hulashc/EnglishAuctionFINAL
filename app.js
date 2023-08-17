@@ -6,7 +6,7 @@ window.addEventListener('load', async () => {
       return;
   }
 
-  const factoryAddress = '0xCff115D4380afB41aF5b5D520E978e33Ba3512c7'; // Replace with the actual Factory contract address
+  const factoryAddress = '0xe489103312E8202BB7523F69aE89B7C889EE74d8'; // Replace with the actual Factory contract address
   const factoryContract = new web3.eth.Contract(auctionFactoryABI, factoryAddress);
 
   let currentAccount;
